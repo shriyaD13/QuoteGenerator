@@ -53,8 +53,11 @@ async function getQuote() {
 
     hideSpinner();
   } catch (e) {
-    getQuote();
-
+    var i=1;
+    if(i<10){
+      getQuote();
+      i++;
+    }
   }
 }
 
