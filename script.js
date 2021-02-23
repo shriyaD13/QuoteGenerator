@@ -4,7 +4,7 @@ const authorText = document.getElementById('author');
 const  twitterBtn= document.getElementById('twitter');
 const newQuoteBTn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
-
+var i=1;
 // add the spinner
 function showSpinner() {
   loader.hidden = false;
@@ -53,7 +53,6 @@ async function getQuote() {
 
     hideSpinner();
   } catch (e) {
-    var i=1;
     if(i<10){
       getQuote();
       i++;
